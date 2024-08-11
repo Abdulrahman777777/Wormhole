@@ -48,8 +48,8 @@ const tubeMaterial = new THREE.MeshBasicMaterial({
 });
 
 const updateCamera = (t) => {
-  const time = t * 0.1;
-  const looptime = 8 * 1000;
+  const time = t * 0.3;
+  const looptime = 10 * 1000;
   const p = (time % looptime) / looptime;
   const position = tubeGeometry.parameters.path.getPointAt(p);
   const lookAt = tubeGeometry.parameters.path.getPointAt((p + 0.03) % 1);
@@ -114,9 +114,10 @@ for (let i = 0; i < boxes; i++) {
   // scene.add(box);
 }
 
-function animate(t = 0) {
+function animate(t) {
   requestAnimationFrame(animate);
   updateCamera(t);
   composer.render(scene, camera);
+  t++;
 }
-animate();
+animate(0);
