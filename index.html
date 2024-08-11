@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loophole</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      h1 {
+        color: #ffb6b6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        top: -6rem;
+        position: relative;
+        text-align: center;
+        background: transparent;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 1vw;
+        font-size: 10vw;
+      }
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -10;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Loophole</h1>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
